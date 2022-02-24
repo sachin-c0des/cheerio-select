@@ -1,0 +1,18 @@
+---
+framework: jest
+preRun:
+     command:
+        - npm ci
+        - npm run build
+preMerge:
+  pattern:
+    - "./src/*.spec.ts"
+    - "./test/*.spec.ts"
+postMerge:
+  pattern: 
+    - "./src/*.spec.ts"
+    - "./test/*.spec.ts"
+postRun:
+     command:
+        - node --version
+version: 1.0
