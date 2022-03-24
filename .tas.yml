@@ -7,12 +7,10 @@ preRun:
         - npm run build
 preMerge:
   pattern:
-    - "./src/*.spec.ts"
-    - "./test/*.spec.ts"
+    - "./src/helpers.spec.ts"
 postMerge:
   pattern: 
-    - "./src/*.spec.ts"
-    - "./test/*.spec.ts"
+    - "./src/helpers.spec.ts"
 postRun:
      command:
         - node --version
